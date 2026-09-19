@@ -1,0 +1,9 @@
+cosla_monthly_base_lifestyle_xp = 25
+
+cosla_monthly_lifestyle_xp_amount = {
+	value = cosla_monthly_base_lifestyle_xp
+	if = {
+		limit = { has_trait = cos_lifestyle_prodigy }
+		multiply = 2
+	}
+}

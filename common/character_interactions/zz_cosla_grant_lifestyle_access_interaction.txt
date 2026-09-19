@@ -1,0 +1,89 @@
+cos_grant_lifestyle_access = {
+	category = interaction_category_diplomacy
+	common_interaction = yes
+	interface_priority = 42
+	icon = icon_scheme
+	ai_frequency = 12
+
+	desc = cos_grant_lifestyle_access_desc
+	send_name = cos_grant_lifestyle_access_send
+	notification_text = cos_grant_lifestyle_access_notification
+
+	cooldown = { months = 1 }
+
+	is_shown = {
+		scope:actor = {
+			is_adult = yes
+			is_ruler = yes
+			cosla_ai_may_grant_lifestyle_access_trigger = yes
+		}
+		scope:recipient = {
+			is_adult = yes
+			NOT = { this = scope:actor }
+			NOT = { cosla_has_lifestyle_access_trigger = yes }
+			NOT = { is_landless_adventurer = yes }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			is_imprisoned = no
+		}
+		scope:recipient = {
+			is_imprisoned = no
+			is_hostage = no
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			cosla_grant_lifestyle_access_effect = yes
+		}
+		scope:actor = {
+			if = {
+				limit = { scope:recipient = { is_ai = no } }
+				send_interface_toast = {
+					type = msg_generic_neutral
+					title = cos_grant_lifestyle_access_toast_title
+					left_icon = scope:recipient
+					right_icon = scope:actor
+					desc = cos_grant_lifestyle_access_toast_desc
+				}
+			}
+		}
+	}
+
+	ai_potential = {
+		scope:actor = {
+			is_ai = yes
+			has_game_rule = cosla_lifestyle_ai_enabled
+			is_ruler = yes
+		}
+	}
+
+	ai_targets = {
+		ai_recipients = courtiers
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 25
+			scope:recipient = {
+				is_close_family_of = scope:actor
+			}
+		}
+		modifier = {
+			add = 15
+			scope:recipient = {
+				is_councillor_of = scope:actor
+			}
+		}
+		modifier = {
+			add = 10
+			scope:recipient = {
+				has_relation_friend = scope:actor
+			}
+		}
+	}
+}

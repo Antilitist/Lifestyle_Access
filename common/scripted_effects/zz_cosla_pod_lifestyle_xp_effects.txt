@@ -1,0 +1,160 @@
+# CoSLA — monthly lifestyle XP for PoD lifestyle trees (requires Princes of Darkness).
+
+cosla_monthly_pod_lifestyle_xp_effect = {
+	if = {
+		limit = { has_lifestyle = choleric_lifestyle }
+		add_choleric_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = melancholy_lifestyle }
+		add_melancholy_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = phlegmatic_lifestyle }
+		add_phlegmatic_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = sanguine_lifestyle }
+		add_sanguine_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = animal_lifestyle }
+		add_animal_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = blood_magic_lifestyle }
+		add_blood_magic_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = necro_magic_lifestyle }
+		add_necro_magic_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = faith_lifestyle }
+		add_faith_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = endowments_lifestyle }
+		add_endowments_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = psi_lifestyle }
+		add_psi_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = sorcery_lifestyle }
+		add_sorcery_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = theurgy_lifestyle }
+		add_theurgy_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = qiao_lifestyle }
+		add_qiao_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = tan_lifestyle }
+		add_tan_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = hekau_alchemy_lifestyle }
+		add_hekau_alchemy_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = hekau_amulets_lifestyle }
+		add_hekau_amulets_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = hekau_celestial_lifestyle }
+		add_hekau_celestial_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = hekau_effigy_lifestyle }
+		add_hekau_effigy_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = hekau_necromancy_lifestyle }
+		add_hekau_necromancy_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = hekau_nomenclature_lifestyle }
+		add_hekau_nomenclature_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = arcanoi_lifestyle }
+		add_arcanoi_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = jade_arcanoi_lifestyle }
+		add_jade_arcanoi_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = dark_arcanoi_lifestyle }
+		add_dark_arcanoi_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = misc_arcanoi_lifestyle }
+		add_misc_arcanoi_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = thorn_lifestyle }
+		add_thorn_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = arcana_lifestyle }
+		add_arcana_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = lore_lifestyle }
+		add_lore_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = investiture_lifestyle }
+		add_investiture_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = possessedpower_lifestyle }
+		add_possessedpower_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = realm_lifestyle }
+		add_realm_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = common_arts_lifestyle }
+		add_common_arts_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = rare_arts_lifestyle }
+		add_rare_arts_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = kith_arts_lifestyle }
+		add_kith_arts_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = slivers_lifestyle }
+		add_slivers_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = wu_tan_lifestyle }
+		add_wu_tan_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = shintai_lifestyle }
+		add_shintai_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = chi_arts_lifestyle }
+		add_chi_arts_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = soul_arts_lifestyle }
+		add_soul_arts_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = demon_arts_lifestyle }
+		add_demon_arts_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+}

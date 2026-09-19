@@ -1,0 +1,37 @@
+# CoSLA — lifestyle access triggers (v1.0.0)
+
+cosla_has_lifestyle_access_trigger = {
+	is_adult = yes
+	is_imprisoned = no
+	NOT = { is_landless_adventurer = yes }
+	OR = {
+		has_trait = cos_lifestyle_prodigy
+		has_character_flag = cosla_lifestyle_access
+	}
+}
+
+cosla_needs_manual_lifestyle_xp_trigger = {
+	cosla_has_lifestyle_access_trigger = yes
+	is_playable_character = no
+	has_any_focus = yes
+}
+
+cosla_ai_may_grant_lifestyle_access_trigger = {
+	OR = {
+		has_game_rule = cosla_lifestyle_ai_enabled
+		is_ai = no
+	}
+}
+
+can_select_lifestyle_focus = {
+	OR = {
+		AND = {
+			is_capable_adult = yes
+			is_playable_character = yes
+		}
+		AND = {
+			is_capable_adult = yes
+			cosla_has_lifestyle_access_trigger = yes
+		}
+	}
+}

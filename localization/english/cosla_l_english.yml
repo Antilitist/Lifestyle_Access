@@ -1,0 +1,18 @@
+﻿l_english:
+ trait_cos_lifestyle_prodigy: "Lifestyle Prodigy"
+ trait_cos_lifestyle_prodigy_desc: "This character has been singled out for intensive personal development. Though they hold no land, they pursue a [lifestyle|E] with the focus of a rising ruler—gaining full experience and access to [perks|E], including PoD [Glossary('Disciplines','game_concept_discipline_desc')] matching their traits."
+ trait_cos_lifestyle_prodigy_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] has been granted permission to develop a full [lifestyle|E] and discipline [perks|E] despite holding no titles."
+
+ cos_grant_lifestyle_access: "Grant Lifestyle Access"
+ cos_grant_lifestyle_access_desc: "Designate [recipient.GetShortUINameNoTooltip] as a #V Lifestyle Prodigy#!, allowing this unlanded character to earn [lifestyle|E] experience, choose a [focus|E], and unlock [perks|E] like a landed ruler.\n\n$EFFECT_LIST_BULLET$Automatically selects a PoD discipline [focus|E] if they have a matching [Glossary('Discipline','game_concept_discipline_desc')] trait\n$EFFECT_LIST_BULLET$Monthly XP applies to resonance and other PoD lifestyle trees\n\n#weak Does not affect landless adventurers or characters who already have lifestyle access.#!"
+ cos_grant_lifestyle_access_send: "Grant access"
+ cos_grant_lifestyle_access_notification: "[actor.GetShortUINameNoTooltip] has granted [recipient.GetShortUINameNoTooltip] full lifestyle access."
+ cos_grant_lifestyle_access_toast_title: "Lifestyle Access Granted"
+ cos_grant_lifestyle_access_toast_desc: "[recipient.GetShortUINameNoTooltip] may now pursue a lifestyle and spend perk points."
+
+ game_rule_category_cosla_lifestyle_ai: "Lifestyle Access"
+ rule_cosla_lifestyle_ai: "AI grants lifestyle access"
+ setting_cosla_lifestyle_ai_players_only: "Players only"
+ setting_cosla_lifestyle_ai_players_only_desc: "Only human rulers may use #V Grant Lifestyle Access#! on courtiers."
+ setting_cosla_lifestyle_ai_enabled: "Enabled"
+ setting_cosla_lifestyle_ai_enabled_desc: "AI rulers may also grant lifestyle access to favoured courtiers."

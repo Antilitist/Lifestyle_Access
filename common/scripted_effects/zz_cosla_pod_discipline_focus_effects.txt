@@ -1,0 +1,267 @@
+# CoSLA — assign PoD discipline lifestyle focus from owned discipline traits.
+
+cosla_assign_pod_discipline_focus_effect = {
+	# Lasombra in-clan preference
+	if = {
+		limit = {
+			has_trait = lasombra
+			OR = {
+				has_trait = obtenebrationadvanced
+				has_obtenebration_trigger = yes
+			}
+		}
+		set_focus = melancholy_obtenebration_focus
+	}
+	# Blood Magic path (Obtenebration mastery + Blood Sorcery)
+	else_if = {
+		limit = {
+			has_trait = obtenebrationadvanced
+			OR = {
+				has_bloodsorcery_trigger = yes
+				has_trait = bloodsorceryadvanced
+			}
+		}
+		set_focus = blood_magic_focus
+	}
+	# Advanced disciplines first
+	else_if = {
+		limit = { has_trait = obtenebrationadvanced }
+		set_focus = melancholy_obtenebration_focus
+	}
+	else_if = {
+		limit = { has_trait = potenceadvanced }
+		set_focus = choleric_potence_focus
+	}
+	else_if = {
+		limit = { has_trait = celerityadvanced }
+		set_focus = choleric_celerity_focus
+	}
+	else_if = {
+		limit = { has_trait = vicissitudeadvanced }
+		set_focus = choleric_vicissitude_focus
+	}
+	else_if = {
+		limit = { has_trait = valerenadvanced }
+		set_focus = choleric_valeren_focus
+	}
+	else_if = {
+		limit = { has_trait = fortitudeadvanced }
+		set_focus = melancholy_fortitude_focus
+	}
+	else_if = {
+		limit = { has_trait = obfuscateadvanced }
+		set_focus = melancholy_obfuscate_focus
+	}
+	else_if = {
+		limit = { has_trait = necromancyadvanced }
+		set_focus = melancholy_necromancy_focus
+	}
+	else_if = {
+		limit = { has_trait = chimerstryadvanced }
+		set_focus = melancholy_chimerstry_focus
+	}
+	else_if = {
+		limit = { has_trait = visceratikaadvanced }
+		set_focus = melancholy_visceratika_focus
+	}
+	else_if = {
+		limit = { has_trait = bardoadvanced }
+		set_focus = melancholy_bardo_focus
+	}
+	else_if = {
+		limit = { has_trait = riftadvanced }
+		set_focus = melancholy_rift_focus
+	}
+	else_if = {
+		limit = { has_trait = auspexadvanced }
+		set_focus = phlegmatic_auspex_focus
+	}
+	else_if = {
+		limit = { has_trait = dominateadvanced }
+		set_focus = phlegmatic_dominate_focus
+	}
+	else_if = {
+		limit = { has_trait = temporisadvanced }
+		set_focus = phlegmatic_temporis_focus
+	}
+	else_if = {
+		limit = { has_trait = dementationadvanced }
+		set_focus = phlegmatic_dementation_focus
+	}
+	else_if = {
+		limit = { has_trait = melpomineeadvanced }
+		set_focus = phlegmatic_melpominee_focus
+	}
+	else_if = {
+		limit = { has_trait = mytherceriaadvanced }
+		set_focus = phlegmatic_mytherceria_focus
+	}
+	else_if = {
+		limit = { has_trait = bloodsorceryadvanced }
+		set_focus = sanguine_bloodsorcery_focus
+	}
+	else_if = {
+		limit = { has_trait = presenceadvanced }
+		set_focus = sanguine_presence_focus
+	}
+	else_if = {
+		limit = { has_trait = daimonionadvanced }
+		set_focus = sanguine_daimonion_focus
+	}
+	else_if = {
+		limit = { has_trait = quietusadvanced }
+		set_focus = sanguine_quietus_focus
+	}
+	else_if = {
+		limit = { has_trait = kaiadvanced }
+		set_focus = sanguine_kai_focus
+	}
+	else_if = {
+		limit = { has_trait = animalismadvanced }
+		set_focus = animal_animalism_focus
+	}
+	else_if = {
+		limit = { has_trait = proteanadvanced }
+		set_focus = animal_protean_focus
+	}
+	else_if = {
+		limit = { has_trait = serpentisadvanced }
+		set_focus = animal_serpentis_focus
+	}
+	else_if = {
+		limit = { has_trait = abombweadvanced }
+		set_focus = animal_abombwe_focus
+	}
+	else_if = {
+		limit = { has_trait = spiritusadvanced }
+		set_focus = animal_spiritus_focus
+	}
+	else_if = {
+		limit = { has_trait = flightadvanced }
+		set_focus = animal_flight_focus
+	}
+	# Base discipline traits
+	else_if = {
+		limit = { has_obtenebration_trigger = yes }
+		set_focus = melancholy_obtenebration_focus
+	}
+	else_if = {
+		limit = { has_potence_trigger = yes }
+		set_focus = choleric_potence_focus
+	}
+	else_if = {
+		limit = { has_celerity_trigger = yes }
+		set_focus = choleric_celerity_focus
+	}
+	else_if = {
+		limit = { has_vicissitude_trigger = yes }
+		set_focus = choleric_vicissitude_focus
+	}
+	else_if = {
+		limit = { has_valeren_trigger = yes }
+		set_focus = choleric_valeren_focus
+	}
+	else_if = {
+		limit = { has_fortitude_trigger = yes }
+		set_focus = melancholy_fortitude_focus
+	}
+	else_if = {
+		limit = { has_obfuscate_trigger = yes }
+		set_focus = melancholy_obfuscate_focus
+	}
+	else_if = {
+		limit = { has_necromancy_trigger = yes }
+		set_focus = melancholy_necromancy_focus
+	}
+	else_if = {
+		limit = { has_chimerstry_trigger = yes }
+		set_focus = melancholy_chimerstry_focus
+	}
+	else_if = {
+		limit = { has_visceratika_trigger = yes }
+		set_focus = melancholy_visceratika_focus
+	}
+	else_if = {
+		limit = { has_bardo_trigger = yes }
+		set_focus = melancholy_bardo_focus
+	}
+	else_if = {
+		limit = { has_rift_trigger = yes }
+		set_focus = melancholy_rift_focus
+	}
+	else_if = {
+		limit = { has_auspex_trigger = yes }
+		set_focus = phlegmatic_auspex_focus
+	}
+	else_if = {
+		limit = { has_dominate_trigger = yes }
+		set_focus = phlegmatic_dominate_focus
+	}
+	else_if = {
+		limit = { has_temporis_trigger = yes }
+		set_focus = phlegmatic_temporis_focus
+	}
+	else_if = {
+		limit = { has_dementation_trigger = yes }
+		set_focus = phlegmatic_dementation_focus
+	}
+	else_if = {
+		limit = { has_melpominee_trigger = yes }
+		set_focus = phlegmatic_melpominee_focus
+	}
+	else_if = {
+		limit = { has_mytherceria_trigger = yes }
+		set_focus = phlegmatic_mytherceria_focus
+	}
+	else_if = {
+		limit = { has_bloodsorcery_trigger = yes }
+		set_focus = sanguine_bloodsorcery_focus
+	}
+	else_if = {
+		limit = { has_presence_trigger = yes }
+		set_focus = sanguine_presence_focus
+	}
+	else_if = {
+		limit = { has_daimonion_trigger = yes }
+		set_focus = sanguine_daimonion_focus
+	}
+	else_if = {
+		limit = { has_quietus_trigger = yes }
+		set_focus = sanguine_quietus_focus
+	}
+	else_if = {
+		limit = { has_kai_trigger = yes }
+		set_focus = sanguine_kai_focus
+	}
+	else_if = {
+		limit = { has_animalism_trigger = yes }
+		set_focus = animal_animalism_focus
+	}
+	else_if = {
+		limit = { has_protean_trigger = yes }
+		set_focus = animal_protean_focus
+	}
+	else_if = {
+		limit = { has_serpentis_trigger = yes }
+		set_focus = animal_serpentis_focus
+	}
+	else_if = {
+		limit = { has_abombwe_trigger = yes }
+		set_focus = animal_abombwe_focus
+	}
+	else_if = {
+		limit = { has_spiritus_trigger = yes }
+		set_focus = animal_spiritus_focus
+	}
+	else_if = {
+		limit = { has_flight_trigger = yes }
+		set_focus = animal_flight_focus
+	}
+}
+
+cosla_grant_vamp_discipline_access_if_needed_effect = {
+	if = {
+		limit = { cosla_needs_vamp_discipline_access_flag_trigger = yes }
+		add_character_flag = vamp_discipline_access
+	}
+}

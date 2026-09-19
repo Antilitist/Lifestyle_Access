@@ -1,0 +1,13 @@
+# CoSLA — Lifestyle Access standalone (v1.0.0)
+# Marks characters permitted to use standard lifestyles while unlanded.
+
+cos_lifestyle_prodigy = {
+	category = lifestyle
+	icon = cos_lifestyle_prodigy.dds
+	shown_in_ruler_designer = no
+
+	# Doubles monthly lifestyle XP (stacks with education and other modifiers).
+	monthly_lifestyle_xp_gain_mult = 1.0
+
+	learning = 1
+}

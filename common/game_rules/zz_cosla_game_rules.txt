@@ -1,0 +1,13 @@
+cosla_lifestyle_ai = {
+	categories = {
+		cosla_lifestyle_ai
+	}
+
+	default = cosla_lifestyle_ai_players_only
+
+	cosla_lifestyle_ai_players_only = {
+	}
+
+	cosla_lifestyle_ai_enabled = {
+	}
+}

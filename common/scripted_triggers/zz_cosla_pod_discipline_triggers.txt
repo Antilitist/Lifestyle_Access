@@ -1,0 +1,70 @@
+# CoSLA — PoD discipline focus detection (requires Princes of Darkness).
+
+cosla_has_assignable_pod_discipline_focus_trigger = {
+	OR = {
+		has_potence_trigger = yes
+		has_trait = potenceadvanced
+		has_celerity_trigger = yes
+		has_trait = celerityadvanced
+		has_vicissitude_trigger = yes
+		has_trait = vicissitudeadvanced
+		has_valeren_trigger = yes
+		has_trait = valerenadvanced
+		has_fortitude_trigger = yes
+		has_trait = fortitudeadvanced
+		has_obfuscate_trigger = yes
+		has_trait = obfuscateadvanced
+		has_obtenebration_trigger = yes
+		has_trait = obtenebrationadvanced
+		has_necromancy_trigger = yes
+		has_trait = necromancyadvanced
+		has_chimerstry_trigger = yes
+		has_trait = chimerstryadvanced
+		has_visceratika_trigger = yes
+		has_trait = visceratikaadvanced
+		has_bardo_trigger = yes
+		has_trait = bardoadvanced
+		has_rift_trigger = yes
+		has_trait = riftadvanced
+		has_auspex_trigger = yes
+		has_trait = auspexadvanced
+		has_dominate_trigger = yes
+		has_trait = dominateadvanced
+		has_temporis_trigger = yes
+		has_trait = temporisadvanced
+		has_dementation_trigger = yes
+		has_trait = dementationadvanced
+		has_melpominee_trigger = yes
+		has_trait = melpomineeadvanced
+		has_mytherceria_trigger = yes
+		has_trait = mytherceriaadvanced
+		has_bloodsorcery_trigger = yes
+		has_trait = bloodsorceryadvanced
+		has_presence_trigger = yes
+		has_trait = presenceadvanced
+		has_daimonion_trigger = yes
+		has_trait = daimonionadvanced
+		has_quietus_trigger = yes
+		has_trait = quietusadvanced
+		has_kai_trigger = yes
+		has_trait = kaiadvanced
+		has_animalism_trigger = yes
+		has_trait = animalismadvanced
+		has_protean_trigger = yes
+		has_trait = proteanadvanced
+		has_serpentis_trigger = yes
+		has_trait = serpentisadvanced
+		has_abombwe_trigger = yes
+		has_trait = abombweadvanced
+		has_spiritus_trigger = yes
+		has_trait = spiritusadvanced
+		has_flight_trigger = yes
+		has_trait = flightadvanced
+	}
+}
+
+cosla_needs_vamp_discipline_access_flag_trigger = {
+	cosla_has_assignable_pod_discipline_focus_trigger = yes
+	NOT = { POD_splat_has_access_to_disciplines = yes }
+	NOT = { has_character_flag = vamp_discipline_access }
+}

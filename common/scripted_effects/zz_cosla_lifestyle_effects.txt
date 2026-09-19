@@ -1,0 +1,68 @@
+# CoSLA — lifestyle access effects (v1.33.7)
+
+cosla_grant_lifestyle_access_effect = {
+	add_trait = cos_lifestyle_prodigy
+	add_character_flag = cosla_lifestyle_access
+	cosla_grant_vamp_discipline_access_if_needed_effect = yes
+	if = {
+		limit = { has_any_focus = no }
+		cosla_assign_initial_focus_effect = yes
+	}
+}
+
+cosla_assign_initial_focus_effect = {
+	if = {
+		limit = { cosla_has_assignable_pod_discipline_focus_trigger = yes }
+		cosla_assign_pod_discipline_focus_effect = yes
+	}
+	else_if = {
+		limit = { has_education_intrigue_trigger = yes }
+		set_focus = intrigue_skulduggery_focus
+	}
+	else_if = {
+		limit = { has_education_diplomacy_trigger = yes }
+		set_focus = diplomacy_family_focus
+	}
+	else_if = {
+		limit = { has_education_martial_trigger = yes }
+		set_focus = martial_strategy_focus
+	}
+	else_if = {
+		limit = { has_education_stewardship_trigger = yes }
+		set_focus = stewardship_wealth_focus
+	}
+	else_if = {
+		limit = { has_education_learning_trigger = yes }
+		set_focus = learning_scholarship_focus
+	}
+	else = {
+		set_focus = intrigue_skulduggery_focus
+	}
+}
+
+# Grants one month of lifestyle XP to the character's active lifestyle tree.
+cosla_monthly_lifestyle_xp_effect = {
+	if = {
+		limit = { has_lifestyle = diplomacy_lifestyle }
+		add_diplomacy_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = martial_lifestyle }
+		add_martial_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = stewardship_lifestyle }
+		add_stewardship_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = intrigue_lifestyle }
+		add_intrigue_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else_if = {
+		limit = { has_lifestyle = learning_lifestyle }
+		add_learning_lifestyle_xp = cosla_monthly_lifestyle_xp_amount
+	}
+	else = {
+		cosla_monthly_pod_lifestyle_xp_effect = yes
+	}
+}
